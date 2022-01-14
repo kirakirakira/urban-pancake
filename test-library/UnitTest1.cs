@@ -3,12 +3,14 @@ using Xunit;
 
 namespace library
 {
-    public class UnitTest1
+    public class Test_Person
     {
         [Fact]
-        public void TestThing()
+        public void HasAName()
         {
-            Assert.Equal(42, new Thing().Get(19, 23));
+            Person me = new Person("Kira", "Bubbles");
+            Assert.Equal("Kira", me.FirstName);
+            Assert.Equal("Bubbles", me.LastName);
         }
     }
 }
