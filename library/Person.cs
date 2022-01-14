@@ -4,8 +4,9 @@ namespace library
 {
     public class Person
     {
-        private string firstName;
-        private string lastName;
+        private string? firstName;
+        private string? lastName;
+        private string? phoneNumber;
         public string FirstName
         {
             get { return firstName; }
@@ -18,10 +19,17 @@ namespace library
             set { lastName = value; }
         }
 
-        public Person(string first, string last)
+        public string PhoneNumber
+        {
+            get { return phoneNumber; }
+            set { phoneNumber = value; }
+        }
+
+        public Person(string first, string last, string phoneNumber = "None")
         {
             FirstName = first;
             LastName = last;
+            PhoneNumber = phoneNumber;
         }
     }
 }

@@ -12,5 +12,12 @@ namespace library
             Assert.Equal("Kira", me.FirstName);
             Assert.Equal("Bubbles", me.LastName);
         }
+
+        [Fact]
+        public void HasAPhoneNumber()
+        {
+            Person me = new Person("Kira", "Bubbles", "555-123-4567");
+            Assert.Equal("555-123-4567", me.PhoneNumber);
+        }
     }
 }
