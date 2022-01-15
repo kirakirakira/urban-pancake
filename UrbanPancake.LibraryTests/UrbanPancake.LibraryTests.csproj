@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\library\library.csproj" />
+    <ProjectReference Include="..\UrbanPancake.Library\UrbanPancake.Library.csproj" />
   </ItemGroup>
 
 </Project>

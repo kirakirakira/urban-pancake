@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "library", "library\library.csproj", "{7C1149B7-E92D-4615-94A7-CF78FCE82586}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanPancake.Library", "UrbanPancake.Library\UrbanPancake.Library.csproj", "{7C1149B7-E92D-4615-94A7-CF78FCE82586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-library", "test-library\test-library.csproj", "{131DB789-B6E9-40A8-A536-9F4A2999DCA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanPancake.LibraryTests", "UrbanPancake.LibraryTests\UrbanPancake.LibraryTests.csproj", "{131DB789-B6E9-40A8-A536-9F4A2999DCA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanPancake", "UrbanPancake\UrbanPancake.csproj", "{CCDB6C67-8B3E-4256-9716-1B8406760C45}"
 EndProject

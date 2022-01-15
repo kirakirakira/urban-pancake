@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\library\library.csproj" />
+    <ProjectReference Include="..\UrbanPancake.Library\UrbanPancake.Library.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

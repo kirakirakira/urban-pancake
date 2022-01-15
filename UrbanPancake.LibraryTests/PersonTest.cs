@@ -1,9 +1,9 @@
 using System;
 using Xunit;
 
-namespace library
+namespace UrbanPancake.Library
 {
-    public class Test_Person
+    public class PersonTest
     {
         [Fact]
         public void HasAName()

@@ -1,25 +1,25 @@
 ﻿using static Newtonsoft.Json.JsonConvert;
 
-namespace library
+namespace UrbanPancake.Library
 {
     public class Person
     {
         private string? firstName;
         private string? lastName;
         private string? phoneNumber;
-        public string FirstName
+        public string? FirstName
         {
             get { return firstName; }
             set { firstName = value; }
         }
 
-        public string LastName
+        public string? LastName
         {
             get { return lastName; }
             set { lastName = value; }
         }
 
-        public string PhoneNumber
+        public string? PhoneNumber
         {
             get { return phoneNumber; }
             set { phoneNumber = value; }
