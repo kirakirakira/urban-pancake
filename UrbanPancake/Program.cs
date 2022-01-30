@@ -7,7 +7,8 @@ namespace UrbanPancake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"The answer is {new Thing().Get(19, 23)}");
+            Person you = new Person("Kira", "Bubbles", "513-234-2421");
+            Console.WriteLine(you);
         }
     }
 }

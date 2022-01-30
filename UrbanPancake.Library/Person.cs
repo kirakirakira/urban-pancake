@@ -4,25 +4,19 @@ namespace UrbanPancake.Library
 {
     public class Person
     {
-        private string? firstName;
-        private string? lastName;
-        private string? phoneNumber;
         public string? FirstName
         {
-            get { return firstName; }
-            set { firstName = value; }
+            get; set;
         }
 
         public string? LastName
         {
-            get { return lastName; }
-            set { lastName = value; }
+            get; set;
         }
 
         public string? PhoneNumber
         {
-            get { return phoneNumber; }
-            set { phoneNumber = value; }
+            get; set;
         }
 
         public Person(string first, string last, string phoneNumber = "None")
@@ -30,6 +24,10 @@ namespace UrbanPancake.Library
             FirstName = first;
             LastName = last;
             PhoneNumber = phoneNumber;
+        }
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
         }
     }
 }
