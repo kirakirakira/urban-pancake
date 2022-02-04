@@ -19,12 +19,19 @@ namespace UrbanPancake.Library
             get; set;
         }
 
-        public Person(string first, string last, string phoneNumber = "None")
+        public string? DriversLicense
+        {
+            get; set;
+        }
+
+        public Person(string first, string last, string? phoneNumber = null, string? driversLicense = null)
         {
             FirstName = first;
             LastName = last;
             PhoneNumber = phoneNumber;
+            DriversLicense = driversLicense;
         }
+        
         public override string ToString()
         {
             return FirstName + " " + LastName;

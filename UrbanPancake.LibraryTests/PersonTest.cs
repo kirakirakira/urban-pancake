@@ -1,18 +1,10 @@
 using System;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace UrbanPancake.Library
 {
     public class PersonTest
     {
-        private readonly ITestOutputHelper output;
-
-        public ITestOutputHelper MyTestClass(ITestOutputHelper output)
-        {
-            this.output;
-        }
-
         [Fact]
         public void HasAName()
         {
@@ -29,10 +21,32 @@ namespace UrbanPancake.Library
         }
 
         [Fact]
-        public void PrintsNameWhenConsoleWriteLined()
+        public void HasNoPhoneNumber()
         {
-            Person me = new Person("Kira", "Bubbles", "555-123-4567");
-            Assert.Equal("Kira Bubbles", output.WriteLine(me));
+            Person me = new Person("Kira", "Bubbles");
+            Assert.Null(me.PhoneNumber);
         }
+
+        [Fact]
+        public void HasADriversLicense()
+        {
+            Person me = new Person("Kira", "Bubbles", "555-123-4567", "123456");
+            Assert.Equal("123456", me.DriversLicense);
+        }
+
+        [Fact]
+        public void HasADriversLicenseAndNoPhoneNumber()
+        {
+            Person me = new Person("Kira", "Bubbles", driversLicense: "123456");
+            Assert.Equal("123456", me.DriversLicense);
+            Assert.Null(me.PhoneNumber);
+        }
+
+        // [Fact]
+        // public void PrintsNameWhenConsoleWriteLined()
+        // {
+        //     Person me = new Person("Kira", "Bubbles", "555-123-4567");
+        //     Assert.Equal("Kira Bubbles", output.WriteLine(me));
+        // }
     }
 }
