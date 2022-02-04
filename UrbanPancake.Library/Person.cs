@@ -24,6 +24,8 @@ namespace UrbanPancake.Library
             get; set;
         }
 
+        public Person() { }
+
         public Person(string first, string last, string? phoneNumber = null, string? driversLicense = null)
         {
             FirstName = first;
@@ -31,7 +33,7 @@ namespace UrbanPancake.Library
             PhoneNumber = phoneNumber;
             DriversLicense = driversLicense;
         }
-        
+
         public override string ToString()
         {
             return FirstName + " " + LastName;
