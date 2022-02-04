@@ -42,6 +42,14 @@ namespace UrbanPancake.Library
             Assert.Null(me.PhoneNumber);
         }
 
+        [Fact]
+        public void HasAPhoneNumberAndNoDriversLicense()
+        {
+            Person me = new Person("Kira", "Bubbles", phoneNumber: "555-123-4567");
+            Assert.Equal("555-123-4567", me.PhoneNumber);
+            Assert.Null(me.DriversLicense);
+        }
+
         // [Fact]
         // public void PrintsNameWhenConsoleWriteLined()
         // {
