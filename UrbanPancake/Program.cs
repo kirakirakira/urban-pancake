@@ -9,10 +9,19 @@ namespace UrbanPancake
     {
         static void Main(string[] args)
         {
-            Person you = new Person("Kira", "Bubbles", "513-234-2421");
-            Console.WriteLine(you);
+            PersonRepository people = new PersonRepository();
+            var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@"UrbanPancake/PersonData.json"));
 
-            var persons = JsonSerializer.Deserialize<Person>(File.ReadAllText(@"UrbanPancake/PersonData.json"));
+            for (int i = 0; i < persons?.Count; i++)
+            {
+                people.Add(persons[i]);
+            }
+
+            Person? foundPerson = people.FindPersonWith("Ryan", "Bubbles");
+            if (foundPerson == null)
+            {
+                Console.WriteLine("There's no person with that name");
+            }
         }
     }
 }

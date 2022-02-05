@@ -1,10 +1,26 @@
-{
-    "people": [
-        {
-            "FirstName": "Kira",
-            "LastName": "Bubbles",
-            "PhoneNumber": "555-123-4567",
-            "DriversLicense": "123456"
-        }
-    ]
-}
+[
+    {
+        "FirstName": "Kira",
+        "LastName": "Bubbles",
+        "PhoneNumber": "555-123-4567",
+        "DriversLicense": "123456"
+    },
+    {
+        "FirstName": "Bob",
+        "LastName": "Bubbles",
+        "PhoneNumber": "555-123-4567",
+        "DriversLicense": "123456"
+    },
+    {
+        "FirstName": "Cassie",
+        "LastName": "Bubbles",
+        "PhoneNumber": "555-123-4567",
+        "DriversLicense": "123456"
+    },
+    {
+        "FirstName": "Katarina",
+        "LastName": "Bubbles",
+        "PhoneNumber": "555-123-4567",
+        "DriversLicense": "123456"
+    }
+]
