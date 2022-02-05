@@ -82,8 +82,8 @@ namespace UrbanPancake.Library
         [Fact]
         public void HasAJob()
         {
-            Person me = new Person("Kira", "Bubbles", job: "Taco Food Truck Owner");
-            Assert.Equal("Taco Food Truck Owner", me.Job);
+            Person me = new Person("Kira", "Bubbles", occupation: "Taco Food Truck Owner");
+            Assert.Equal("Taco Food Truck Owner", me.Occupation);
         }
 
         // [Fact]

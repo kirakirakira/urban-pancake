@@ -44,7 +44,7 @@ namespace UrbanPancake.Library
             get; set;
         }
 
-        public string? Job
+        public string? Occupation
         {
             get; set;
         }
@@ -60,7 +60,7 @@ namespace UrbanPancake.Library
             int creditCardNumber = 0,
             string? carModel = null,
             string? licensePlateNumber = null,
-            string? job = null)
+            string? occupation = null)
         {
             FirstName = first;
             LastName = last;
@@ -70,7 +70,7 @@ namespace UrbanPancake.Library
             CreditCardNumber = creditCardNumber;
             CarModel = carModel;
             LicensePlateNumber = licensePlateNumber;
-            Job = job;
+            Occupation = occupation;
         }
 
         public override string ToString()
