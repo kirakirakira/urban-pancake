@@ -24,14 +24,53 @@ namespace UrbanPancake.Library
             get; set;
         }
 
+        public string[]? Belongings
+        {
+            get; set;
+        }
+
+        public int CreditCardNumber
+        {
+            get; set;
+        }
+
+        public string? CarModel
+        {
+            get; set;
+        }
+
+        public string? LicensePlateNumber
+        {
+            get; set;
+        }
+
+        public string? Job
+        {
+            get; set;
+        }
+
         public Person() { }
 
-        public Person(string first, string last, string? phoneNumber = null, string? driversLicense = null)
+        public Person(
+            string first,
+            string last,
+            string? phoneNumber = null,
+            string? driversLicense = null,
+            string[]? belongings = null,
+            int creditCardNumber = 0,
+            string? carModel = null,
+            string? licensePlateNumber = null,
+            string? job = null)
         {
             FirstName = first;
             LastName = last;
             PhoneNumber = phoneNumber;
             DriversLicense = driversLicense;
+            Belongings = belongings;
+            CreditCardNumber = creditCardNumber;
+            CarModel = carModel;
+            LicensePlateNumber = licensePlateNumber;
+            Job = job;
         }
 
         public override string ToString()

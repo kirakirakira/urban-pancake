@@ -50,6 +50,42 @@ namespace UrbanPancake.Library
             Assert.Null(me.DriversLicense);
         }
 
+        [Fact]
+        public void HasBelongings()
+        {
+            string[] stuff = { "wallet", "keys", "coupons", "Costco receipt" };
+            Person me = new Person("Kira", "Bubbles", belongings: stuff);
+            Assert.Equal(stuff, me.Belongings);
+        }
+
+        [Fact]
+        public void HasCreditCardNumber()
+        {
+            Person me = new Person("Kira", "Bubbles", creditCardNumber: 1234567890);
+            Assert.Equal(1234567890, me.CreditCardNumber);
+        }
+
+        [Fact]
+        public void HasACarModel()
+        {
+            Person me = new Person("Kira", "Bubbles", carModel: "Toyota Prius");
+            Assert.Equal("Toyota Prius", me.CarModel);
+        }
+
+        [Fact]
+        public void HasALicensePlateNumber()
+        {
+            Person me = new Person("Kira", "Bubbles", licensePlateNumber: "ACME123");
+            Assert.Equal("ACME123", me.LicensePlateNumber);
+        }
+
+        [Fact]
+        public void HasAJob()
+        {
+            Person me = new Person("Kira", "Bubbles", job: "Taco Food Truck Owner");
+            Assert.Equal("Taco Food Truck Owner", me.Job);
+        }
+
         // [Fact]
         // public void PrintsNameWhenConsoleWriteLined()
         // {
