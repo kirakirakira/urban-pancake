@@ -54,6 +54,11 @@ namespace UrbanPancake.Library
             get; set;
         }
 
+        public string[]? Hobbies
+        {
+            get; set;
+        }
+
         public Person() { }
 
         public Person(
@@ -66,7 +71,8 @@ namespace UrbanPancake.Library
             string? carModel = null,
             string? licensePlateNumber = null,
             string? occupation = null,
-            Dictionary<string, Person> relationships = null)
+            Dictionary<string, Person> relationships = null,
+            string[]? hobbies = null)
         {
             FirstName = first;
             LastName = last;
@@ -78,6 +84,7 @@ namespace UrbanPancake.Library
             LicensePlateNumber = licensePlateNumber;
             Occupation = occupation;
             Relationships = relationships;
+            Hobbies = hobbies;
         }
 
         public override string ToString()

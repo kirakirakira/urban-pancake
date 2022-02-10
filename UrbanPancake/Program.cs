@@ -22,6 +22,7 @@ namespace UrbanPancake
             {
                 Console.WriteLine("There's no person with that name");
             }
+            Console.WriteLine(foundPerson);
             Console.WriteLine(foundPerson?.PhoneNumber);
             if (foundPerson?.PhoneNumber == null)
             {

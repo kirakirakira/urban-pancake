@@ -97,11 +97,19 @@ namespace UrbanPancake.Library
             Assert.Equal(relationships, me.Relationships);
         }
 
-        // [Fact]
-        // public void PrintsNameWhenConsoleWriteLined()
-        // {
-        //     Person me = new Person("Kira", "Bubbles", "555-123-4567");
-        //     Assert.Equal("Kira Bubbles", output.WriteLine(me));
-        // }
+        [Fact]
+        public void HasHobbies()
+        {
+            string[] stuff = { "soccer", "reading", "playing Mario Kart" };
+            Person me = new Person("Kira", "Bubbles", hobbies: stuff);
+            Assert.Equal(stuff, me.Hobbies);
+        }
+
+        [Fact]
+        public void PrintsNameWhenToStringCalled()
+        {
+            Person me = new Person("Kira", "Bubbles", "555-123-4567");
+            Assert.Equal("Kira Bubbles", me.ToString());
+        }
     }
 }
