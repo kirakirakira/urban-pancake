@@ -17,10 +17,15 @@ namespace UrbanPancake
                 people.Add(persons[i]);
             }
 
-            Person? foundPerson = people.FindPersonWith("Ryan", "Bubbles");
+            Person? foundPerson = people.FindPersonWith("Katarina", "Bubbles");
             if (foundPerson == null)
             {
                 Console.WriteLine("There's no person with that name");
+            }
+            Console.WriteLine(foundPerson?.PhoneNumber);
+            if (foundPerson?.PhoneNumber == null)
+            {
+                Console.WriteLine("The found person does not have a phone number");
             }
         }
     }

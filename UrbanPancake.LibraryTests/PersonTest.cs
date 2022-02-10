@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace UrbanPancake.Library
@@ -84,6 +85,16 @@ namespace UrbanPancake.Library
         {
             Person me = new Person("Kira", "Bubbles", occupation: "Taco Food Truck Owner");
             Assert.Equal("Taco Food Truck Owner", me.Occupation);
+        }
+
+        [Fact]
+        public void HasRelationshipsWithOtherPeople()
+        {
+            Dictionary<string, Person> relationships = new Dictionary<string, Person>();
+            Person me = new Person("Kira", "Bubbles", relationships: relationships);
+            Person husband = new Person("Papa", "Pig");
+            Person child = new Person("Peppa", "Pig");
+            Assert.Equal(relationships, me.Relationships);
         }
 
         // [Fact]
