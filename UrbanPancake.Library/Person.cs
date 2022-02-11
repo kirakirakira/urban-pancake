@@ -71,9 +71,13 @@ namespace UrbanPancake.Library
             string? carModel = null,
             string? licensePlateNumber = null,
             string? occupation = null,
-            Dictionary<string, Person> relationships = null,
+            Dictionary<string, Person>? relationships = null,
             string[]? hobbies = null)
         {
+            if (relationships == null)
+            {
+                relationships = new Dictionary<string, Person>();
+            }
             FirstName = first;
             LastName = last;
             PhoneNumber = phoneNumber;
