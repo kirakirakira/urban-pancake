@@ -2,6 +2,15 @@ namespace UrbanPancake.Library
 {
     public class Receipt : IEvidence
     {
+        private static string DictionaryToString(Dictionary<string, int> source, string keyValueSeparator, string sequenceSeparator)
+        {
+            if (source == null)
+                throw new ArgumentException("Parameter source can not be null.");
+
+            var pairs = source.Select(x => string.Format("{0}{1} {2}", x.Key, keyValueSeparator, x.Value));
+
+            return string.Join(sequenceSeparator, pairs);
+        }
         public decimal? TotalAmount
         {
             get; set;
@@ -35,10 +44,11 @@ namespace UrbanPancake.Library
             Details = details;
         }
 
-        // public override string ToString()
-        // {
-        //     return $"type: {Type}, condition: {(Condition == null ? "Unknown" : Condition)}, details: {(Details == null ? "Unknown" : Details)}, found at: {(LocationFound == null ? "Unknown" : LocationFound)}, date found: {(DateFound == default(DateTime) ? "Unknown" : DateFound)}";
-        // }
+        public override string ToString()
+        {
+            string itemsPurchasedString = DictionaryToString(ItemsPurchased, ":", ", ");
+            return $"Total amount: {TotalAmount}, items purchased: {itemsPurchasedString}, condition: {(Condition == null ? "Unknown" : Condition)}, details: {(Details == null ? "Unknown" : Details)}, found at: {(LocationFound == null ? "Unknown" : LocationFound)}, date found: {(DateFound == default(DateTime) ? "Unknown" : DateFound)}";
+        }
     }
 }
 
