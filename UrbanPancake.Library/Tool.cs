@@ -6,7 +6,7 @@ namespace UrbanPancake.Library
         {
             get; set;
         }
-        public string? LocationFound { get; set; }
+        public Place? LocationFound { get; set; }
         public DateTime DateFound { get; set; }
         public string? Condition
         {
@@ -16,16 +16,11 @@ namespace UrbanPancake.Library
 
         public Tool(
             string type,
-            string? locationFound = null,
+            Place? locationFound = null,
             DateTime dateFound = default(DateTime),
             string? condition = null,
             string? details = null)
         {
-            // if (!dateFound.HasValue)
-            // {
-            //     dateFound = DateTime.Now;
-            // }
-
             Type = type;
             LocationFound = locationFound;
             DateFound = dateFound;
@@ -33,11 +28,10 @@ namespace UrbanPancake.Library
             Details = details;
         }
 
-
-
-        // public override string ToString()
-        // {
-        // }
+        public override string ToString()
+        {
+            return $"type: {Type}, condition: {(Condition == null ? "Unknown" : Condition)}, details: {(Details == null ? "Unknown" : Details)}, found at: {(LocationFound == null ? "Unknown" : LocationFound)}, date found: {(DateFound == default(DateTime) ? "Unknown" : DateFound)}";
+        }
     }
 }
 

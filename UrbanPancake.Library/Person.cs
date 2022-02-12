@@ -1,6 +1,4 @@
-﻿using static Newtonsoft.Json.JsonConvert;
-
-namespace UrbanPancake.Library
+﻿namespace UrbanPancake.Library
 {
     public class Person
     {
@@ -49,7 +47,7 @@ namespace UrbanPancake.Library
             get; set;
         }
 
-        public Dictionary<string, Person> Relationships
+        public Dictionary<string, Person>? Relationships
         {
             get; set;
         }
@@ -74,10 +72,6 @@ namespace UrbanPancake.Library
             Dictionary<string, Person>? relationships = null,
             string[]? hobbies = null)
         {
-            if (relationships == null)
-            {
-                relationships = new Dictionary<string, Person>();
-            }
             FirstName = first;
             LastName = last;
             PhoneNumber = phoneNumber;

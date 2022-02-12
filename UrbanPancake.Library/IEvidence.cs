@@ -4,7 +4,7 @@ namespace UrbanPancake.Library
     {
         DateTime DateFound { get; set; }
 
-        string? LocationFound { get; set; }
+        Place? LocationFound { get; set; }
 
         string? Condition { get; set; }
 

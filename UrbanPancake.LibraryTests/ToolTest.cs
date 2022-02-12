@@ -14,10 +14,47 @@ namespace UrbanPancake.Library
         }
 
         [Fact]
+        public void HasALocationFound()
+        {
+            Place bank = new Place("First National Bank", "156 Short Street", "555-111-1111");
+            Tool scissors = new Tool("sharp object", condition: "rusty", locationFound: bank);
+            Assert.Equal(bank, scissors.LocationFound);
+        }
+
+        [Fact]
+        public void HasADateFound()
+        {
+            DateTime date1 = new DateTime(2022, 2, 13, 6, 45, 12);
+            Tool scissors = new Tool("sharp object", condition: "rusty", dateFound: date1);
+            Assert.Equal(date1, scissors.DateFound);
+        }
+
+        [Fact]
         public void HasACondition()
         {
             Tool scissors = new Tool("sharp object", condition: "rusty");
             Assert.Equal("rusty", scissors.Condition);
+        }
+
+        [Fact]
+        public void HasDetails()
+        {
+            Tool scissors = new Tool("sharp object", details: "purple handle, nick on one blade");
+            Assert.Equal("purple handle, nick on one blade", scissors.Details);
+        }
+
+        [Fact]
+        public void PrintsSummaryWhenToStringCalledWithoutConditionLocationFoundOrDateFound()
+        {
+            Tool scissors = new Tool("sharp object", details: "purple handle, nick on one blade");
+            Assert.Equal("type: sharp object, condition: Unknown, details: purple handle, nick on one blade, found at: Unknown, date found: Unknown", scissors.ToString());
+        }
+
+        [Fact]
+        public void PrintsSummaryWhenToStringCalledWithoutDetails()
+        {
+            Tool scissors = new Tool("sharp object");
+            Assert.Equal("type: sharp object, condition: Unknown, details: Unknown, found at: Unknown, date found: Unknown", scissors.ToString());
         }
     }
 }
