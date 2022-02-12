@@ -95,6 +95,14 @@ namespace UrbanPancake.Library
         [Fact]
         public void PrintsSummaryWhenToStringCalledWithoutDetails()
         {
+            Dictionary<string, int> donuts = new Dictionary<string, int>()
+            {
+                {"chocolate donut", 3},
+                {"glazed donut", 2}
+            };
+            Receipt receipt1 = new Receipt(23.46m, donuts);
+            Assert.Equal("Total amount: 23.46, items purchased: chocolate donut: 3, glazed donut: 2, condition: Unknown, details: Unknown, found at: Unknown, date found: Unknown", receipt1.ToString());
+
         }
     }
 }
