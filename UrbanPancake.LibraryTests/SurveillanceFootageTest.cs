@@ -10,7 +10,13 @@ namespace UrbanPancake.Library
         private static TimeSpan duration = new TimeSpan(2, 14, 18);
         private static DateTime timestamp = new DateTime(2022, 2, 14, 12, 45, 12);
         private static Person author = new Person("Jacky", "Bubbles");
-        private static SurveillanceFootage video = new SurveillanceFootage(duration, donutShop, timestamp, author);
+        private static List<string> imageRecognition = new List<string>()
+        {
+            "dog",
+            "carrot",
+            "fork"
+        };
+        private static SurveillanceFootage video = new SurveillanceFootage(duration, donutShop, timestamp, author, imageRecognition);
 
         [Fact]
         public void HasADuration()
@@ -34,6 +40,12 @@ namespace UrbanPancake.Library
         public void HasAnAuthor()
         {
             Assert.Equal(author, video.Author);
+        }
+
+        [Fact]
+        public void HasImageRecognition()
+        {
+            Assert.Equal(imageRecognition, video.ImageRecognition);
         }
     }
 }
