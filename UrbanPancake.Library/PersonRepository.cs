@@ -1,4 +1,4 @@
-using System;
+using System.Text;
 
 namespace UrbanPancake.Library
 {
@@ -24,6 +24,24 @@ namespace UrbanPancake.Library
                 Console.WriteLine(e);
                 return null;
             }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            if (_allPersons.Count != 0)
+            {
+                foreach (Person? person in _allPersons)
+                {
+                    sb.Append(person.ToString() + "\n");
+                }
+            }
+            else
+            {
+                sb.Append("There are no people in the repository.");
+            }
+
+            return sb.ToString();
         }
 
         public PersonRepository()

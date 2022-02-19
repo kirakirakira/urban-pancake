@@ -7,26 +7,59 @@ namespace UrbanPancake
 {
     class Program
     {
+        static List<IMenuItem> items = new List<IMenuItem>()
+        {
+            new ShowPeople(),
+            new Exit()
+        };
+
+        private static int GetNumber(string message = "Enter a number: ")
+        {
+            while (true)
+            {
+                Console.WriteLine(message);
+                int number;
+                bool validNumber = int.TryParse(Console.ReadLine(), out number);
+                if (validNumber)
+                    return number;
+                else
+                    Console.WriteLine("That was not a number, try again");
+            }
+        }
+
+        private static bool ShowMenu()
+        {
+            Console.WriteLine("\n");
+            Console.WriteLine("Main Menu:");
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {items[i].Choice}");
+            }
+
+            int userChoice = GetNumber("Enter your choice: ");
+
+            Console.WriteLine("\n");
+            Console.WriteLine($"Your choice was {userChoice}");
+
+            if (userChoice > items.Count)
+            {
+                Console.WriteLine("You failed to make a valid choice, too bad!");
+                Console.WriteLine("Just kidding, try again");
+                return false;
+            }
+            else
+            {
+                return items[userChoice - 1].ExecuteChoice();
+            }
+        }
+
         static void Main(string[] args)
         {
-            PersonRepository people = new PersonRepository();
-            var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@"UrbanPancake/PersonData.json"));
-
-            for (int i = 0; i < persons?.Count; i++)
+            var keepGoing = true;
+            while (keepGoing)
             {
-                people.Add(persons[i]);
-            }
-
-            Person? foundPerson = people.FindPersonWith("Katarina", "Bubbles");
-            if (foundPerson == null)
-            {
-                Console.WriteLine("There's no person with that name");
-            }
-            Console.WriteLine(foundPerson);
-            Console.WriteLine(foundPerson?.PhoneNumber);
-            if (foundPerson?.PhoneNumber == null)
-            {
-                Console.WriteLine("The found person does not have a phone number");
+                keepGoing = ShowMenu();
             }
         }
     }
