@@ -64,6 +64,11 @@ namespace UrbanPancake
             string mystery = System.IO.File.ReadAllText("./UrbanPancake/Mystery.txt");
             Console.WriteLine(mystery);
 
+            Console.WriteLine("\n");
+
+            string mission = System.IO.File.ReadAllText("./UrbanPancake/Mission.txt");
+            Console.WriteLine(mission);
+
             var keepGoing = true;
             while (keepGoing)
             {
