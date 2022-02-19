@@ -27,7 +27,7 @@
             get; set;
         }
 
-        public int CreditCardNumber
+        public string? CreditCardNumber
         {
             get; set;
         }
@@ -47,7 +47,7 @@
             get; set;
         }
 
-        public Dictionary<string, Person>? Relationships
+        public Dictionary<string, string>? Relationships
         {
             get; set;
         }
@@ -65,11 +65,11 @@
             string? phoneNumber = null,
             string? driversLicense = null,
             string[]? belongings = null,
-            int creditCardNumber = 0,
+            string? creditCardNumber = null,
             string? carModel = null,
             string? licensePlateNumber = null,
             string? occupation = null,
-            Dictionary<string, Person>? relationships = null,
+            Dictionary<string, string>? relationships = null,
             string[]? hobbies = null)
         {
             FirstName = first;

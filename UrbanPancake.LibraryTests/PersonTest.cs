@@ -62,8 +62,8 @@ namespace UrbanPancake.Library
         [Fact]
         public void HasCreditCardNumber()
         {
-            Person me = new Person("Kira", "Bubbles", creditCardNumber: 1234567890);
-            Assert.Equal(1234567890, me.CreditCardNumber);
+            Person me = new Person("Kira", "Bubbles", creditCardNumber: "1234567890");
+            Assert.Equal("1234567890", me.CreditCardNumber);
         }
 
         [Fact]
@@ -90,10 +90,9 @@ namespace UrbanPancake.Library
         [Fact]
         public void HasRelationshipsWithOtherPeople()
         {
-            Dictionary<string, Person> relationships = new Dictionary<string, Person>();
+            Dictionary<string, string> relationships = new Dictionary<string, string>();
+            relationships.Add("mother", "Peppa Pig");
             Person me = new Person("Kira", "Bubbles", relationships: relationships);
-            Person husband = new Person("Papa", "Pig");
-            Person child = new Person("Peppa", "Pig");
             Assert.Equal(relationships, me.Relationships);
         }
 

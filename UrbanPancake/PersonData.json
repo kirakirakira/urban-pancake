@@ -3,7 +3,23 @@
         "FirstName": "Kira",
         "LastName": "Bubbles",
         "PhoneNumber": "555-123-4567",
-        "DriversLicense": "123456"
+        "DriversLicense": "123456",
+        "Belongings": [
+            "baseball game ticket",
+            "Tamagotchi",
+            "lip balm"
+        ],
+        "CreditCardNumber": "5555123489001234",
+        "CarModel": "Toyota Prius",
+        "LicensePlateNumber": "ACME123",
+        "Occupation": "Olympic swimmer",
+        "Relationships": {
+            "mother": "Cassie Bubbles"
+        },
+        "Hobbies": [
+            "swimming",
+            "thrift shopping"
+        ]
     },
     {
         "FirstName": "Bob",
