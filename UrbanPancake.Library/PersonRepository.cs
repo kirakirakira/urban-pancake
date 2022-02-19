@@ -31,6 +31,7 @@ namespace UrbanPancake.Library
             StringBuilder sb = new StringBuilder();
             if (_allPersons.Count != 0)
             {
+                sb.Append("The people in the repository are: \n");
                 foreach (Person? person in _allPersons)
                 {
                     sb.Append(person.ToString() + "\n");

@@ -41,12 +41,12 @@ namespace UrbanPancake
 
             Console.WriteLine("\n");
             Console.WriteLine($"Your choice was {userChoice}");
+            Console.WriteLine("\n");
 
             if (userChoice > items.Count)
             {
-                Console.WriteLine("You failed to make a valid choice, too bad!");
-                Console.WriteLine("Just kidding, try again");
-                return false;
+                Console.WriteLine("You failed to make a valid choice, try again!");
+                return true;
             }
             else
             {
@@ -56,6 +56,14 @@ namespace UrbanPancake
 
         static void Main(string[] args)
         {
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("**********************************");
+            Console.WriteLine("Welcome to Mystery Hour\n");
+            Console.WriteLine("\n");
+
+            string mystery = System.IO.File.ReadAllText("./UrbanPancake/Mystery.txt");
+            Console.WriteLine(mystery);
+
             var keepGoing = true;
             while (keepGoing)
             {
