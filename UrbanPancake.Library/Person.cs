@@ -89,6 +89,39 @@
         {
             return FirstName + " " + LastName;
         }
+
+        public void DisplayDetails()
+        {
+            string stuff = "";
+            if (Belongings?.Count() > 0)
+            {
+                stuff = string.Join(", ", Belongings);
+            }
+
+
+            string activities = "";
+            if (Hobbies?.Count() > 0)
+            {
+                activities = string.Join(", ", Hobbies);
+            }
+
+            string peeps = "";
+            if (Relationships?.Count() > 0)
+            {
+                peeps = string.Join(", ", Relationships);
+            }
+
+            string details = this.ToString() + "\n" +
+                            "Driver license number: " + DriversLicense + "\n" +
+                            "Belongings: " + stuff + "\n" +
+                            "Credit Card Number: " + CreditCardNumber + "\n" +
+                            "Car Model: " + CarModel + "\n" +
+                            "License Plate Number: " + LicensePlateNumber + "\n" +
+                            "Occupation: " + Occupation + "\n" +
+                            "Relationships: " + peeps + "\n" +
+                            "Hobbies: " + activities + "\n";
+            Console.WriteLine(details);
+        }
     }
 }
 

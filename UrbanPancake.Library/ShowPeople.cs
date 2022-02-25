@@ -8,10 +8,11 @@ namespace UrbanPancake.Library
         public bool ExecuteChoice()
         {
             PersonRepository people = new PersonRepository();
-            var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@"UrbanPancake/PersonData.json"));
+            var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@"UrbanPancake/Data/PersonData.json"));
 
             for (int i = 0; i < persons?.Count; i++)
             {
+                persons[i].DisplayDetails();
                 people.Add(persons[i]);
             }
 

@@ -14,7 +14,8 @@
         "LicensePlateNumber": "ACME123",
         "Occupation": "Olympic swimmer",
         "Relationships": {
-            "mother": "Cassie Bubbles"
+            "mother": "Cassie Bubbles",
+            "cousin": "Cheech"
         },
         "Hobbies": [
             "swimming",

@@ -1,7 +1,4 @@
-﻿using System;
-using UrbanPancake.Library;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+﻿using UrbanPancake.Library;
 
 namespace UrbanPancake
 {
@@ -56,27 +53,24 @@ namespace UrbanPancake
 
         static void Main(string[] args)
         {
-            List<string> thing = new List<string> { "a", "b", "c" };
-            Console.WriteLine(thing.IsCountEven());
-            Console.WriteLine(thing.IsCountOdd());
-            // Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            // Console.WriteLine("**********************************");
-            // Console.WriteLine("Welcome to Mystery Hour\n");
-            // Console.WriteLine("\n");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("**********************************");
+            Console.WriteLine("Welcome to Mystery Hour\n");
+            Console.WriteLine("\n");
 
-            // string mystery = System.IO.File.ReadAllText("./UrbanPancake/Mystery.txt");
-            // Console.WriteLine(mystery);
+            string mystery = System.IO.File.ReadAllText("./UrbanPancake/Mystery.txt");
+            Console.WriteLine(mystery);
 
-            // Console.WriteLine("\n");
+            Console.WriteLine("\n");
 
-            // string mission = System.IO.File.ReadAllText("./UrbanPancake/Mission.txt");
-            // Console.WriteLine(mission);
+            string mission = System.IO.File.ReadAllText("./UrbanPancake/Mission.txt");
+            Console.WriteLine(mission);
 
-            // var keepGoing = true;
-            // while (keepGoing)
-            // {
-            //     keepGoing = ShowMenu();
-            // }
+            var keepGoing = true;
+            while (keepGoing)
+            {
+                keepGoing = ShowMenu();
+            }
         }
     }
 }
