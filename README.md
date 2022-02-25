@@ -8,7 +8,7 @@ Mac/Linux:
 
 ## Project Description
 Someone's stolen some donuts from Miss Krumpet!
-![Pink donut](/pink-donut.jpg)
+![Pink donut](pink_donut.jpg)
 
 ## Requirements Met
 Minimum:
