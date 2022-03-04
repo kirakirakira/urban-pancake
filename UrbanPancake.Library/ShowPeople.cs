@@ -18,7 +18,7 @@ namespace UrbanPancake.Library
 
             Console.WriteLine(people);
 
-            return 1;
+            return (int)MenuFunction.One;
         }
     }
 }

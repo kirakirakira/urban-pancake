@@ -21,10 +21,10 @@ namespace UrbanPancake
 
             MainMenu menu = new MainMenu();
 
-            var keepGoing = 1;
-            while (keepGoing == 1)
+            var keepGoing = (int)MenuFunction.One;
+            while (keepGoing == (int)MenuFunction.One)
             {
-                keepGoing = menu.ExecuteChoice();
+                keepGoing = (int)menu.ExecuteChoice();
             }
         }
     }
