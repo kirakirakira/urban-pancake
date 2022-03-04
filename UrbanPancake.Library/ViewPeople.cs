@@ -10,9 +10,9 @@ namespace UrbanPancake.Library
         {
             Choice = choice;
         }
-        public bool ExecuteChoice()
+        public int ExecuteChoice()
         {
-            return true;
+            return 1;
         }
     }
 }

@@ -5,7 +5,7 @@ namespace UrbanPancake.Library
     public class ShowPeople : IMenuItem
     {
         public string Choice { get; set; } = "View all people";
-        public bool ExecuteChoice()
+        public int ExecuteChoice()
         {
             PersonRepository people = new PersonRepository();
             var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@"UrbanPancake/Data/PersonData.json"));
@@ -18,7 +18,7 @@ namespace UrbanPancake.Library
 
             Console.WriteLine(people);
 
-            return true;
+            return 1;
         }
     }
 }

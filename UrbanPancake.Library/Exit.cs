@@ -11,18 +11,18 @@ namespace UrbanPancake.Library
         {
         }
 
-        public bool ExecuteChoice()
+        public int ExecuteChoice()
         {
             Console.WriteLine("Type quit to quit");
             var quitString = Console.ReadLine();
             if (quitString == "quit")
             {
                 Console.WriteLine("Program exited");
-                return false;
+                return 4;
             }
             else
             {
-                return true;
+                return 2;
             }
         }
     }
