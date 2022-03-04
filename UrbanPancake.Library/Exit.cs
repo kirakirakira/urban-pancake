@@ -18,11 +18,11 @@ namespace UrbanPancake.Library
             if (quitString == "quit")
             {
                 Console.WriteLine("Program exited");
-                return (int)MenuFunction.Four;
+                return (int)MenuFunction.ExitProgram;
             }
             else
             {
-                return (int)MenuFunction.Two;
+                return (int)MenuFunction.ContinueMainMenu;
             }
         }
     }

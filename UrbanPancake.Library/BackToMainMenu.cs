@@ -18,11 +18,11 @@ namespace UrbanPancake.Library
             if (backString == "back")
             {
                 Console.WriteLine("Returning");
-                return (int)MenuFunction.Three;
+                return (int)MenuFunction.ReturnToMainMenu;
             }
             else
             {
-                return (int)MenuFunction.One;
+                return (int)MenuFunction.ContinueCurrentMenu;
             }
         }
     }

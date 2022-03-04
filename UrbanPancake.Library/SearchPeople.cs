@@ -8,7 +8,7 @@ namespace UrbanPancake.Library
         public int ExecuteChoice()
         {
             Console.WriteLine("Search people here");
-            return (int)MenuFunction.One;
+            return (int)MenuFunction.ContinueCurrentMenu;
         }
     }
 }

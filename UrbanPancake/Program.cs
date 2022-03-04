@@ -21,8 +21,8 @@ namespace UrbanPancake
 
             MainMenu menu = new MainMenu();
 
-            var keepGoing = (int)MenuFunction.One;
-            while (keepGoing == (int)MenuFunction.One)
+            var keepGoing = (int)MenuFunction.ContinueCurrentMenu;
+            while (keepGoing == (int)MenuFunction.ContinueCurrentMenu)
             {
                 keepGoing = (int)menu.ExecuteChoice();
             }
