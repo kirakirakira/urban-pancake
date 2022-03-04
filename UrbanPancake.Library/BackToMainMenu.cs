@@ -13,17 +13,8 @@ namespace UrbanPancake.Library
 
         public int ExecuteChoice()
         {
-            Console.WriteLine("Type back to go back to the main menu");
-            var backString = Console.ReadLine();
-            if (backString == "back")
-            {
-                Console.WriteLine("Returning");
-                return (int)MenuFunction.ReturnToMainMenu;
-            }
-            else
-            {
-                return (int)MenuFunction.ContinueCurrentMenu;
-            }
+            Console.WriteLine("Returning");
+            return (int)MenuFunction.ReturnToMainMenu;
         }
     }
 }
