@@ -1,14 +1,20 @@
 using System.Text;
+using System.Text.Json;
 
 namespace UrbanPancake.Library
 {
-    public class PersonRepository
+    public class PersonRepository // : IEnumerable<int>
     {
         private readonly List<Person> _allPersons = new List<Person>();
 
         public void Add(Person person)
         {
             _allPersons.Add(person);
+        }
+
+        public int Count()
+        {
+            return _allPersons.Count();
         }
 
         public Person? FindPersonWith(string first, string last)
@@ -45,8 +51,30 @@ namespace UrbanPancake.Library
             return sb.ToString();
         }
 
+        // public IEnumerator<Person> GetEnumerator()
+        // {
+        //     return _allPersons.GetEnumerator();
+        // }
+
+        // IEnumerator IEnumerable.GetEnumerator()
+        // {
+        //     return this.GetEnumerator();
+        // }
+
+        // public Person this[int index]
+        // {
+        //     get { return _allPersons[index]; }
+        //     set { _allPersons.Insert(index, value); }
+        // }
+
         public PersonRepository()
         {
+            var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@"UrbanPancake/Data/PersonData.json"));
+
+            for (int i = 0; i < persons?.Count; i++)
+            {
+                _allPersons.Add(persons[i]);
+            }
         }
     }
 }

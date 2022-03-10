@@ -1,5 +1,3 @@
-using System.Text.Json;
-
 namespace UrbanPancake.Library
 {
     public class ShowPeople : IMenuItem
@@ -7,17 +5,9 @@ namespace UrbanPancake.Library
         public string Choice { get; set; } = "View all people";
         public int ExecuteChoice()
         {
-            PersonRepository people = new PersonRepository();
-            var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@"UrbanPancake/Data/PersonData.json"));
+            PersonRepository personRepository = new PersonRepository();
 
-            for (int i = 0; i < persons?.Count; i++)
-            {
-                persons[i].DisplayDetails();
-                people.Add(persons[i]);
-            }
-
-            Console.WriteLine(people);
-
+            Console.WriteLine(personRepository);
             return (int)MenuFunction.ContinueCurrentMenu;
         }
     }
