@@ -6,8 +6,8 @@ namespace UrbanPancake.Library
         public int ExecuteChoice()
         {
             PersonRepository personRepository = new PersonRepository();
-
             Console.WriteLine(personRepository);
+
             return (int)MenuFunction.ContinueCurrentMenu;
         }
     }
