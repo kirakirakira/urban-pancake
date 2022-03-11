@@ -1,14 +1,15 @@
+using System.Text.Json;
+
 namespace UrbanPancake.Library
 {
-    public class MainMenu : IMenuItem
+    public class InterviewMenu : IMenuItem
     {
         private static List<IMenuItem> items = new List<IMenuItem>()
         {
-            new PeopleMenu(),
-            new InterviewMenu(),
-            new Exit()
+            new ShowInterviews(),
+            new BackToMainMenu()
         };
-        public string Choice { get; set; } = "Main Menu. Make a selection.";
+        public string Choice { get; set; } = "Interview Menu. Make a selection.";
 
         private static int ShowMenu()
         {
@@ -36,12 +37,12 @@ namespace UrbanPancake.Library
 
         public int ExecuteChoice()
         {
-            var keepGoing = (int)MenuFunction.ContinueMainMenu;
-            while (keepGoing == (int)MenuFunction.ContinueMainMenu)
+            var keepGoing = (int)MenuFunction.ContinueCurrentMenu;
+            while (keepGoing == (int)MenuFunction.ContinueCurrentMenu)
             {
                 keepGoing = ShowMenu();
             }
-            return (int)MenuFunction.ExitProgram;
+            return (int)MenuFunction.ContinueMainMenu;
         }
     }
 }

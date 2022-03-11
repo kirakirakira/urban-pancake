@@ -1,0 +1,15 @@
+[
+    {
+        "Interviewer": {
+            "FirstName": "John",
+            "LastName": "McGee"
+        },
+        "Interviewee": {
+            "FirstName": "Kira",
+            "LastName": "Bubbles"
+        },
+        "Timestamp": "2022-02-14T00:00:00",
+        "Duration": "0.0:30:02",
+        "Transcript": "I loved those donuts, I would never steal them!"
+    }
+]

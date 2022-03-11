@@ -23,5 +23,10 @@ namespace UrbanPancake.Library
             Duration = duration;
             Transcript = transcript;
         }
+
+        public override string ToString()
+        {
+            return Interviewer.FirstName + " " + Interviewer.LastName;
+        }
     }
 }
