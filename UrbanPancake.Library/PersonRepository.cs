@@ -12,11 +12,6 @@ namespace UrbanPancake.Library
             _allPersons.Add(person);
         }
 
-        public int Count()
-        {
-            return _allPersons.Count();
-        }
-
         public Person? FindPersonWith(string first, string last)
         {
             Person? foundPerson;
