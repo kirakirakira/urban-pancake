@@ -12,20 +12,20 @@ namespace UrbanPancake.Library
             _allInterviews.Add(interview);
         }
 
-        // public Interview? FindInterviewWith(string first, string last)
-        // {
-        //     Interview? foundInterview;
-        //     try
-        //     {
-        //         foundInterview = _allInterviews.Find(interview => interview.interviewee == Person(first, last));
-        //         return foundInterview;
-        //     }
-        //     catch (Exception e)
-        //     {
-        //         Console.WriteLine(e);
-        //         return null;
-        //     }
-        // }
+        public Interview? FindInterviewWith(string first, string last)
+        {
+            Interview? foundInterview;
+            try
+            {
+                foundInterview = _allInterviews.Find(interview => interview.Interviewee.FirstName == first && interview.Interviewee.LastName == last);
+                return foundInterview;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+        }
 
         public override string ToString()
         {

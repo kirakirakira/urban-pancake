@@ -7,6 +7,7 @@ namespace UrbanPancake.Library
         private static List<IMenuItem> items = new List<IMenuItem>()
         {
             new ShowInterviews(),
+            new SearchInterviews(),
             new BackToMainMenu()
         };
         public string Choice { get; set; } = "Interview Menu. Make a selection.";

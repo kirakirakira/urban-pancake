@@ -26,7 +26,10 @@ namespace UrbanPancake.Library
 
         public override string ToString()
         {
-            return Interviewer.FirstName + " " + Interviewer.LastName;
+            return "Interviewer: " + Interviewer.FirstName + " " + Interviewer.LastName + "\n" +
+                    "Interviewee: " + Interviewee.FirstName + " " + Interviewee.LastName + "\n" +
+                    "Date Time: " + Timestamp + "\n" +
+                    "Transcript: " + Transcript + "\n";
         }
     }
 }
