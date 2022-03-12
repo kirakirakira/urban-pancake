@@ -27,7 +27,7 @@ namespace UrbanPancake.Library
             if (userChoice > items.Count)
             {
                 Console.WriteLine("You failed to make a valid choice, try again!");
-                return (int)MenuFunction.ContinueCurrentMenu;
+                return (int)MenuFunctions.ContinueCurrentMenu;
             }
             else
             {
@@ -37,12 +37,12 @@ namespace UrbanPancake.Library
 
         public int ExecuteChoice()
         {
-            var keepGoing = (int)MenuFunction.ContinueMainMenu;
-            while (keepGoing == (int)MenuFunction.ContinueMainMenu)
+            var keepGoing = (int)MenuFunctions.ContinueMainMenu;
+            while (keepGoing == (int)MenuFunctions.ContinueMainMenu)
             {
                 keepGoing = ShowMenu();
             }
-            return (int)MenuFunction.ExitProgram;
+            return (int)MenuFunctions.ExitProgram;
         }
     }
 }

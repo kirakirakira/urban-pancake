@@ -8,7 +8,7 @@ namespace UrbanPancake.Library
             PersonRepository personRepository = new PersonRepository();
             Console.WriteLine(personRepository);
 
-            return (int)MenuFunction.ContinueCurrentMenu;
+            return (int)MenuFunctions.ContinueCurrentMenu;
         }
     }
 }

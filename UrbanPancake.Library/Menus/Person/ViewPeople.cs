@@ -12,7 +12,7 @@ namespace UrbanPancake.Library
         }
         public int ExecuteChoice()
         {
-            return (int)MenuFunction.ContinueCurrentMenu;
+            return (int)MenuFunctions.ContinueCurrentMenu;
         }
     }
 }

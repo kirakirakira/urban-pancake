@@ -1,18 +1,8 @@
-using System.Text.Json;
-
 namespace UrbanPancake.Library
 {
-    public class InterviewMenu : IMenuItem
+    public class MenuFunction
     {
-        private static List<IMenuItem> items = new List<IMenuItem>()
-        {
-            new ShowInterviews(),
-            new SearchInterviews(),
-            new BackToMainMenu()
-        };
-        public string Choice { get; set; } = "Interview Menu. Make a selection.";
-
-        private static int ShowMenu()
+        private static int ShowMenu(List<IMenuItem> items)
         {
             for (int i = 0; i < items.Count; i++)
             {

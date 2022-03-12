@@ -1,6 +1,6 @@
 namespace UrbanPancake.Library
 {
-    public enum MenuFunction
+    public enum MenuFunctions
     {
         ContinueCurrentMenu = 1,
         ContinueMainMenu = 2,

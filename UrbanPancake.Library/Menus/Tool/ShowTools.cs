@@ -7,7 +7,7 @@ namespace UrbanPancake.Library
         {
             ToolRepository tools = new ToolRepository();
             Console.WriteLine(tools);
-            return (int)MenuFunction.ContinueCurrentMenu;
+            return (int)MenuFunctions.ContinueCurrentMenu;
         }
     }
 }

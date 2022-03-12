@@ -7,7 +7,7 @@ namespace UrbanPancake.Library
         {
             InterviewRepository interviews = new InterviewRepository();
             Console.WriteLine(interviews);
-            return (int)MenuFunction.ContinueCurrentMenu;
+            return (int)MenuFunctions.ContinueCurrentMenu;
         }
     }
 }

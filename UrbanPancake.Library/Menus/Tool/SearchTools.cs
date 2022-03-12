@@ -24,7 +24,7 @@ namespace UrbanPancake.Library
                 }
             }
 
-            return (int)MenuFunction.ContinueCurrentMenu;
+            return (int)MenuFunctions.ContinueCurrentMenu;
         }
     }
 }
