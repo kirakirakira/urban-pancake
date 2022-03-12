@@ -32,7 +32,7 @@ namespace UrbanPancake.Library
             StringBuilder sb = new StringBuilder();
             if (_allInterviews.Count != 0)
             {
-                sb.Append("The people in the repository are: \n");
+                sb.Append("The interviews in the repository are: \n");
                 foreach (Interview? interview in _allInterviews)
                 {
                     sb.Append(interview.ToString() + "\n");

@@ -8,8 +8,21 @@
             "FirstName": "Kira",
             "LastName": "Bubbles"
         },
-        "Timestamp": "2022-02-14T00:00:00",
+        "Timestamp": "2022-02-14T13:20:00",
         "Duration": "0.0:30:02",
         "Transcript": "I loved those donuts, I would never steal them!"
+    },
+    {
+        "Interviewer": {
+            "FirstName": "John",
+            "LastName": "McGee"
+        },
+        "Interviewee": {
+            "FirstName": "Cassie",
+            "LastName": "Bubbles"
+        },
+        "Timestamp": "2022-02-14T03:40:00",
+        "Duration": "0.0:28:40",
+        "Transcript": "\nCassie: I'm allergic to dairy, I can't eat donuts. \nJohn: They have vegan donuts. \nCassie: Oh..."
     }
 ]

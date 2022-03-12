@@ -1,0 +1,24 @@
+[
+    {
+        "Type": "wallet",
+        "LocationFound": {
+            "Name": "sidewalk",
+            "Location": "outside of Urban Pancake",
+            "PhoneNumber": "N/A"
+        },
+        "DateFound": "2022-02-13T08:20:00",
+        "Condition": "shiny with scuffs around the edges",
+        "Details": "pink metallic color"
+    },
+    {
+        "Type": "gum wrapper",
+        "LocationFound": {
+            "Name": "Urban Pancake",
+            "Location": "on a table",
+            "PhoneNumber": "555-111-2222"
+        },
+        "DateFound": "2022-02-13T12:20:00",
+        "Condition": "crumpled",
+        "Details": "silver, emitted minty scent"
+    }
+]

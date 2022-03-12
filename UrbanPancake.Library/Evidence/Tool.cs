@@ -30,7 +30,7 @@ namespace UrbanPancake.Library
 
         public override string ToString()
         {
-            return $"type: {Type}, condition: {(Condition == null ? "Unknown" : Condition)}, details: {(Details == null ? "Unknown" : Details)}, found at: {(LocationFound == null ? "Unknown" : LocationFound)}, date found: {(DateFound == default(DateTime) ? "Unknown" : DateFound)}";
+            return $"type: {Type}\ncondition: {(Condition == null ? "Unknown" : Condition)}\ndetails: {(Details == null ? "Unknown" : Details)}\nfound at: {(LocationFound == null ? "Unknown" : LocationFound)}\ndate found: {(DateFound == default(DateTime) ? "Unknown" : DateFound)}\n";
         }
     }
 }
