@@ -3,7 +3,7 @@ using System.Text;
 
 namespace UrbanPancake.Library
 {
-    public class BackToMainMenu : IMenuItem
+    public class BackToMainMenu : IMenuFunction
     {
         public string Choice { get; set; } = "Back to main menu";
 

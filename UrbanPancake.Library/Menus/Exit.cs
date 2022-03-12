@@ -3,7 +3,7 @@ using System.Text;
 
 namespace UrbanPancake.Library
 {
-    public class Exit : IMenuItem
+    public class Exit : IMenuFunction
     {
         public string Choice { get; set; } = "Exit";
 

@@ -1,9 +1,15 @@
 namespace UrbanPancake.Library
 {
-    public class MenuFunction
+    public interface IMenuFunction : IMenuItem
     {
-        private static int ShowMenu(List<IMenuItem> items)
+        public List<IMenuFunction> GetItems()
         {
+            return new List<IMenuFunction>();
+        }
+        private int ShowMenu()
+        {
+            List<IMenuFunction> items = this.GetItems();
+
             for (int i = 0; i < items.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {items[i].Choice}");

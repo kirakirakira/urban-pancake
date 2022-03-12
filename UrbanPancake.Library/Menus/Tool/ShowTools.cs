@@ -1,6 +1,6 @@
 namespace UrbanPancake.Library
 {
-    public class ShowTools : IMenuItem
+    public class ShowTools : IMenuFunction
     {
         public string Choice { get; set; } = "View all tools";
         public int ExecuteChoice()

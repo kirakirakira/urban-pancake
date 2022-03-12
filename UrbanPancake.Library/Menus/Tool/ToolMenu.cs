@@ -2,14 +2,20 @@ using System.Text.Json;
 
 namespace UrbanPancake.Library
 {
-    public class ToolMenu : IMenuItem
+    public class ToolMenu : IMenuFunction
     {
-        private static List<IMenuItem> items = new List<IMenuItem>()
+        private static List<IMenuFunction> items = new List<IMenuFunction>()
         {
             new ShowTools(),
             new SearchTools(),
             new BackToMainMenu()
         };
+
+        public List<IMenuFunction> GetItems()
+        {
+            return items;
+        }
+
         public string Choice { get; set; } = "Tool Menu. Make a selection.";
 
         private static int ShowMenu()

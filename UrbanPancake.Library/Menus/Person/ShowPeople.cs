@@ -1,6 +1,6 @@
 namespace UrbanPancake.Library
 {
-    public class ShowPeople : IMenuItem
+    public class ShowPeople : IMenuFunction
     {
         public string Choice { get; set; } = "View all people";
         public int ExecuteChoice()

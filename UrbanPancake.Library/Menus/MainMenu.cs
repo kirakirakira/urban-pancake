@@ -1,14 +1,20 @@
 namespace UrbanPancake.Library
 {
-    public class MainMenu : IMenuItem
+    public class MainMenu
     {
-        private static List<IMenuItem> items = new List<IMenuItem>()
+        private static List<IMenuFunction> items = new List<IMenuFunction>()
         {
             new PeopleMenu(),
             new InterviewMenu(),
             new ToolMenu(),
             new Exit()
         };
+
+        public List<IMenuFunction> GetItems()
+        {
+            return items;
+        }
+
         public string Choice { get; set; } = "Main Menu. Make a selection.";
 
         private static int ShowMenu()

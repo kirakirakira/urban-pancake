@@ -2,7 +2,7 @@ using System.Text.Json;
 
 namespace UrbanPancake.Library
 {
-    public class SearchTools : IMenuItem
+    public class SearchTools : IMenuFunction
     {
         public string Choice { get; set; } = "Search for a specific tool";
         public int ExecuteChoice()
