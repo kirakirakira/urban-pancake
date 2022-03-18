@@ -7,7 +7,7 @@ namespace UrbanPancake.Library
         public string Choice { get; set; } = "Search for a specific tool";
         public int ExecuteChoice()
         {
-            Console.WriteLine("What type of tool are you looking for");
+            Console.WriteLine("What type of tool are you looking for?");
             string? type = Console.ReadLine();
 
             ToolRepository tools = new ToolRepository();

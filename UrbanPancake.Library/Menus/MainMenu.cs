@@ -28,7 +28,7 @@ namespace UrbanPancake.Library
 
             Console.WriteLine("\n");
             Console.WriteLine($"Your choice was {userChoice}");
-            Console.WriteLine("\n");
+            Console.Clear();
 
             if (userChoice > items.Count)
             {

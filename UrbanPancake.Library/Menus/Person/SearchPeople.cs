@@ -19,7 +19,7 @@ namespace UrbanPancake.Library
                 Person? found = personRepository.FindPersonWith(firstName, lastName);
                 if (found != null)
                 {
-                    found.DisplayDetails();
+                    Console.WriteLine("\n" + found.GetDetails());
                 }
                 else
                 {

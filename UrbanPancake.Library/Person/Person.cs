@@ -90,7 +90,7 @@
             return FirstName + " " + LastName;
         }
 
-        public void DisplayDetails()
+        public string GetDetails()
         {
             string stuff = "";
             if (Belongings?.Count() > 0)
@@ -120,7 +120,7 @@
                             "Occupation: " + Occupation + "\n" +
                             "Relationships: " + peeps + "\n" +
                             "Hobbies: " + activities + "\n";
-            Console.WriteLine(details);
+            return details;
         }
     }
 }
