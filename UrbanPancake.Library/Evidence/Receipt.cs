@@ -11,7 +11,7 @@ namespace UrbanPancake.Library
 
             return string.Join(sequenceSeparator, pairs);
         }
-        public decimal? TotalAmount
+        public string? TotalAmount
         {
             get; set;
         }
@@ -29,15 +29,15 @@ namespace UrbanPancake.Library
         public string? Details { get; set; }
 
         public Receipt(
-            decimal totalAmount,
             Dictionary<string, int> itemsPurchased,
+            string totalAmount,
             Place? locationFound = null,
             DateTime dateFound = default(DateTime),
             string? condition = null,
             string? details = null)
         {
-            TotalAmount = totalAmount;
             ItemsPurchased = itemsPurchased;
+            TotalAmount = totalAmount;
             LocationFound = locationFound;
             DateFound = dateFound;
             Condition = condition;
@@ -47,7 +47,7 @@ namespace UrbanPancake.Library
         public override string ToString()
         {
             string itemsPurchasedString = DictionaryToString(ItemsPurchased, ":", ", ");
-            return $"Total amount: {TotalAmount}, items purchased: {itemsPurchasedString}, condition: {(Condition == null ? "Unknown" : Condition)}, details: {(Details == null ? "Unknown" : Details)}, found at: {(LocationFound == null ? "Unknown" : LocationFound)}, date found: {(DateFound == default(DateTime) ? "Unknown" : DateFound)}";
+            return $"Items purchased: {itemsPurchasedString}, total: {TotalAmount}, condition: {(Condition == null ? "Unknown" : Condition)}, details: {(Details == null ? "Unknown" : Details)}, found at: {(LocationFound == null ? "Unknown" : LocationFound.Name)}, date found: {(DateFound == default(DateTime) ? "Unknown" : DateFound)}";
         }
     }
 }

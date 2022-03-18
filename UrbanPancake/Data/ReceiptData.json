@@ -1,0 +1,17 @@
+[
+    {
+        "ItemsPurchased": {
+            "chocolate donut": 2,
+            "croissant": 1
+        },
+        "TotalAmount": "6.57",
+        "LocationFound": {
+            "Name": "Urban Pancake",
+            "Location": "in the trash",
+            "PhoneNumber": "555-111-2222"
+        },
+        "DateFound": "2022-02-14T13:14:33",
+        "Condition": "sticky",
+        "Details": "smiley face drawn on the back"
+    }
+]

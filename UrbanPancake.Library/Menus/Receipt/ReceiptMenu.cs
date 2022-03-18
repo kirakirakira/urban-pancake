@@ -1,11 +1,11 @@
 namespace UrbanPancake.Library
 {
-    public class PeopleMenu : IMenuFunction
+    public class ReceiptMenu : IMenuFunction
     {
         private static List<IMenuFunction> items = new List<IMenuFunction>()
         {
-            new ShowPeople(),
-            new SearchPeople(),
+            new ShowReceipts(),
+            // new SearchReceipts(),
             new BackToMainMenu()
         };
 
@@ -14,6 +14,6 @@ namespace UrbanPancake.Library
             return items;
         }
 
-        public string Choice { get; set; } = "People Menu. Make a selection.";
+        public string Choice { get; set; } = "Receipt Menu. Make a selection.";
     }
 }
