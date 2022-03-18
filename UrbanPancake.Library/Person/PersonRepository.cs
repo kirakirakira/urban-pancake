@@ -3,13 +3,18 @@ using System.Text.Json;
 
 namespace UrbanPancake.Library
 {
-    public class PersonRepository // : IEnumerable<int>
+    public class PersonRepository : IRepository<Person>
     {
         private readonly List<Person> _allPersons = new List<Person>();
 
-        public void Add(Person person)
+        public void Add(Person item)
         {
-            _allPersons.Add(person);
+            _allPersons.Add(item);
+        }
+
+        public IEnumerable<Person> GetAllItems()
+        {
+            return _allPersons;
         }
 
         public Person? FindPersonWith(string first, string last)
@@ -26,41 +31,6 @@ namespace UrbanPancake.Library
                 return null;
             }
         }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            if (_allPersons.Count != 0)
-            {
-                sb.Append("The people in the repository are: \n");
-                foreach (Person? person in _allPersons)
-                {
-                    sb.Append(person.ToString() + "\n");
-                }
-            }
-            else
-            {
-                sb.Append("There are no people in the repository.");
-            }
-
-            return sb.ToString();
-        }
-
-        // public IEnumerator<Person> GetEnumerator()
-        // {
-        //     return _allPersons.GetEnumerator();
-        // }
-
-        // IEnumerator IEnumerable.GetEnumerator()
-        // {
-        //     return this.GetEnumerator();
-        // }
-
-        // public Person this[int index]
-        // {
-        //     get { return _allPersons[index]; }
-        //     set { _allPersons.Insert(index, value); }
-        // }
 
         public PersonRepository()
         {

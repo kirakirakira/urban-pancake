@@ -6,7 +6,12 @@ namespace UrbanPancake.Library
         public int ExecuteChoice()
         {
             PersonRepository personRepository = new PersonRepository();
-            Console.WriteLine(personRepository);
+
+            IEnumerable<Person> people = personRepository.GetAllItems();
+            foreach (Person person in people)
+            {
+                Console.WriteLine(person + "\n");
+            }
 
             return (int)MenuFunctions.ContinueCurrentMenu;
         }
