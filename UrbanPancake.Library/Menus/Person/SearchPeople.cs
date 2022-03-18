@@ -11,7 +11,8 @@ namespace UrbanPancake.Library
             Console.WriteLine("What is their last name?");
             string? lastName = Console.ReadLine();
 
-            PersonRepository personRepository = new PersonRepository();
+            string dataFilePath = "UrbanPancake/Data/PersonData.json";
+            PersonRepository personRepository = new PersonRepository(dataFilePath);
             if (firstName != null && lastName != null)
             {
                 Person? found = personRepository.FindPersonWith(firstName, lastName);

@@ -32,9 +32,9 @@ namespace UrbanPancake.Library
             }
         }
 
-        public PersonRepository()
+        public PersonRepository(string dataFilePath)
         {
-            var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@"UrbanPancake/Data/PersonData.json"));
+            var persons = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText(@dataFilePath));
 
             for (int i = 0; i < persons?.Count; i++)
             {

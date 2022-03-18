@@ -47,14 +47,14 @@ namespace UrbanPancake.Library
         public void PrintsSummaryWhenToStringCalledWithoutConditionLocationFoundOrDateFound()
         {
             Tool scissors = new Tool("sharp object", details: "purple handle, nick on one blade");
-            Assert.Equal("type: sharp object, condition: Unknown, details: purple handle, nick on one blade, found at: Unknown, date found: Unknown", scissors.ToString());
+            Assert.Equal("type: sharp object\ncondition: Unknown\ndetails: purple handle, nick on one blade\nfound at: Unknown\ndate found: Unknown\n", scissors.ToString());
         }
 
         [Fact]
         public void PrintsSummaryWhenToStringCalledWithoutDetails()
         {
             Tool scissors = new Tool("sharp object");
-            Assert.Equal("type: sharp object, condition: Unknown, details: Unknown, found at: Unknown, date found: Unknown", scissors.ToString());
+            Assert.Equal("type: sharp object\ncondition: Unknown\ndetails: Unknown\nfound at: Unknown\ndate found: Unknown\n", scissors.ToString());
         }
     }
 }

@@ -8,33 +8,35 @@ namespace UrbanPancake.Library
         [Fact]
         public void ShouldAddAPersonAndFindThem()
         {
-            PersonRepository personRepository = new PersonRepository();
+            string dataFilePath = "/home/kira/git/urban-pancake/UrbanPancake/Data/PersonData.json";
+            PersonRepository personRepository = new PersonRepository(dataFilePath);
             Person expected = new Person
             {
-                FirstName = "Kira",
-                LastName = "Bubbles",
+                FirstName = "Addie",
+                LastName = "Tootles",
                 PhoneNumber = "555-123-4567"
             };
 
             personRepository.Add(expected);
 
-            Assert.Equal(expected, personRepository.FindPersonWith("Kira", "Bubbles"));
+            Assert.Equal(expected, personRepository.FindPersonWith("Addie", "Tootles"));
         }
 
         [Fact]
         public void ShouldReturnNullIfPersonIsNotFound()
         {
-            PersonRepository personRepository = new PersonRepository();
+            string dataFilePath = "/home/kira/git/urban-pancake/UrbanPancake/Data/PersonData.json";
+            PersonRepository personRepository = new PersonRepository(dataFilePath);
             Person expected = new Person
             {
-                FirstName = "Kira",
-                LastName = "Bubbles",
+                FirstName = "Addie",
+                LastName = "Tootles",
                 PhoneNumber = "555-123-4567"
             };
 
             personRepository.Add(expected);
 
-            Assert.Null(personRepository.FindPersonWith("Ryan", "Bubbles"));
+            Assert.Null(personRepository.FindPersonWith("Ryan", "Tootles"));
         }
     }
 }
