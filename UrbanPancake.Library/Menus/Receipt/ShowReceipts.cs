@@ -6,8 +6,11 @@ namespace UrbanPancake.Library
         public int ExecuteChoice()
         {
             ReceiptRepository receiptRepository = new ReceiptRepository();
-            Console.WriteLine(receiptRepository);
-
+            IEnumerable<Receipt> receipts = receiptRepository.GetAllItems();
+            foreach (Receipt receipt in receipts)
+            {
+                Console.WriteLine(receipt + "\n");
+            }
             return (int)MenuFunctions.ContinueCurrentMenu;
         }
     }

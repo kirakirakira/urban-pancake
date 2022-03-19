@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace UrbanPancake.Library
 {
-    public class ReceiptRepository
+    public class ReceiptRepository : IRepository<Receipt>
     {
         private readonly List<Receipt> _allReceipts = new List<Receipt>();
 
@@ -12,38 +12,23 @@ namespace UrbanPancake.Library
             _allReceipts.Add(receipt);
         }
 
-        // public Receipt? FindReceiptWithItemPurchased(string item)
-        // {
-        //     Receipt? foundReceipt;
-        //     try
-        //     {
-        //         foundReceipt = _allReceipts.Find(receipt => receipt.ItemsPurchased.ContainsKey(item));
-        //         return foundReceipt;
-        //     }
-        //     catch (Exception e)
-        //     {
-        //         Console.WriteLine(e);
-        //         return null;
-        //     }
-        // }
-
-        public override string ToString()
+        public IEnumerable<Receipt> GetAllItems()
         {
-            StringBuilder sb = new StringBuilder();
-            if (_allReceipts.Count != 0)
+            return _allReceipts;
+        }
+        public Receipt? FindReceiptWithItemPurchased(string item)
+        {
+            Receipt? foundReceipt;
+            try
             {
-                sb.Append("The tools in the repository are: \n");
-                foreach (Receipt? receipt in _allReceipts)
-                {
-                    sb.Append(receipt.ToString() + "\n");
-                }
+                foundReceipt = _allReceipts.Find(receipt => receipt.ItemsPurchased.ContainsKey(item));
+                return foundReceipt;
             }
-            else
+            catch (Exception e)
             {
-                sb.Append("There are no receipts in the repository.");
+                Console.WriteLine(e);
+                return null;
             }
-
-            return sb.ToString();
         }
 
         public ReceiptRepository()
@@ -52,7 +37,6 @@ namespace UrbanPancake.Library
 
             for (int i = 0; i < receipts?.Count; i++)
             {
-                Console.WriteLine(receipts[i]);
                 _allReceipts.Add(receipts[i]);
             }
         }

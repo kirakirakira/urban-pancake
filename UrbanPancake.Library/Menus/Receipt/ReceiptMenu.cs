@@ -5,7 +5,7 @@ namespace UrbanPancake.Library
         private static List<IMenuFunction> items = new List<IMenuFunction>()
         {
             new ShowReceipts(),
-            // new SearchReceipts(),
+            new SearchReceipts(),
             new BackToMainMenu()
         };
 
