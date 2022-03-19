@@ -32,3 +32,6 @@ Features:
 1. Create 3 or more unit tests for your application.
 1. Create an additional class which inherits one or more properties from its parent. (Used an interface)
 1. Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program.
+
+## Next steps
+Not all of the pieces of evidence have data or menus yet. Also, the data isn't fully populated and thus is not enough evidence for a fulfilling sleuthing experience. But the framework is set up and the creative part of developing the case and evidence is next.
