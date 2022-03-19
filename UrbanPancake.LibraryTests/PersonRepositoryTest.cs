@@ -8,8 +8,7 @@ namespace UrbanPancake.Library
         [Fact]
         public void ShouldAddAPersonAndFindThem()
         {
-            string dataFilePath = "/home/kira/git/urban-pancake/UrbanPancake/Data/PersonData.json";
-            PersonRepository personRepository = new PersonRepository(dataFilePath);
+            PersonRepository personRepository = new PersonRepository();
             Person expected = new Person
             {
                 FirstName = "Addie",
@@ -25,8 +24,7 @@ namespace UrbanPancake.Library
         [Fact]
         public void ShouldReturnNullIfPersonIsNotFound()
         {
-            string dataFilePath = "/home/kira/git/urban-pancake/UrbanPancake/Data/PersonData.json";
-            PersonRepository personRepository = new PersonRepository(dataFilePath);
+            PersonRepository personRepository = new PersonRepository();
             Person expected = new Person
             {
                 FirstName = "Addie",
