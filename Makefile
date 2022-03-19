@@ -9,3 +9,7 @@ test-verbose:
 .PHONY: run
 run:
 	dotnet run --project UrbanPancake/UrbanPancake.csproj
+
+.PHONY: restore
+restore:
+	cd UrbanPancake; dotnet restore
