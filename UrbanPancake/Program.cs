@@ -6,18 +6,20 @@ namespace UrbanPancake
     {
         static void Main(string[] args)
         {
+            Console.Clear();
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("**********************************");
             Console.WriteLine("Welcome to Mystery Hour\n");
-            Console.WriteLine("\n");
 
             string mystery = System.IO.File.ReadAllText("./UrbanPancake/Mystery.txt");
             Console.WriteLine(mystery);
 
-            Console.WriteLine("\n");
-
             string mission = System.IO.File.ReadAllText("./UrbanPancake/Mission.txt");
             Console.WriteLine(mission);
+
+            Console.WriteLine("Press any key to accept the undertaking of solving this mystery. Grab a pen and paper to take notes.");
+            Console.ReadKey();
+            Console.Clear();
 
             MainMenu menu = new MainMenu();
 

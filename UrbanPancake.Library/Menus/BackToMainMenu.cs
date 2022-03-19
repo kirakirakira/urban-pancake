@@ -13,7 +13,7 @@ namespace UrbanPancake.Library
 
         public int ExecuteChoice()
         {
-            Console.WriteLine("Returning");
+            Console.WriteLine("Main Menu");
             return (int)MenuFunctions.ReturnToMainMenu;
         }
     }

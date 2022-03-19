@@ -16,6 +16,6 @@ namespace UrbanPancake.Library
             return items;
         }
 
-        public string Choice { get; set; } = "Interview Menu. Make a selection.";
+        public string Choice { get; set; } = "To view interviews taken around the time of the crime.";
     }
 }

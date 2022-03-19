@@ -14,6 +14,6 @@ namespace UrbanPancake.Library
             return items;
         }
 
-        public string Choice { get; set; } = "People Menu. Make a selection.";
+        public string Choice { get; set; } = "To learn about various suspects.";
     }
 }

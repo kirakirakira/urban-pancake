@@ -14,6 +14,6 @@ namespace UrbanPancake.Library
             return items;
         }
 
-        public string Choice { get; set; } = "Receipt Menu. Make a selection.";
+        public string Choice { get; set; } = "To view receipts that have been found near the scene of the crime.";
     }
 }
