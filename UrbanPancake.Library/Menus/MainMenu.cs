@@ -8,6 +8,7 @@ namespace UrbanPancake.Library
             new InterviewMenu(),
             new ToolMenu(),
             new ReceiptMenu(),
+            new SolveMenu(),
             new Exit()
         };
 
