@@ -2,13 +2,12 @@
 Mystery game in C# for Code Louisville Software Development Course 1
 
 ## How To Run
-This project uses .NET Core 6.0. To download the SDK: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+This project uses .NET 6.0. To download the SDK: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+
+You will also need the .NET CLI. https://docs.microsoft.com/en-us/dotnet/core/tools/
 
 There is a Makefile for this project.
 
-Windows:
-
-Mac/Linux:
 1. Clone repo
 1. Navigate to this project in the terminal.
 1. From the parent directory:
