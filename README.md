@@ -6,7 +6,7 @@ This project uses .NET 6.0. To download the SDK: https://dotnet.microsoft.com/en
 
 You will also need the .NET CLI. https://docs.microsoft.com/en-us/dotnet/core/tools/
 
-There is a Makefile for this project.
+There is a Makefile for this project. If you can't run a Makefile in Window's Command Prompt then use the full `dotnet` commands or you can ditch Windows here: https://ubuntu.com/download/desktop
 
 1. Clone repo
 1. Navigate to this project in the terminal.
@@ -15,6 +15,10 @@ There is a Makefile for this project.
     1. To run: `make run`
     1. To run tests: `make test`
 
+Windows:
+1. To restore dependencies:
+2. To run: `dotnet run --project UrbanPancake/UrbanPancake.csproj`
+3. To run tests: 
 
 ## Project Description
 Someone's stolen some donuts from Miss Krumpet! It's your job to review the evidence and figure out who did it. Navigate through the menus to view and search the evidence data. Once you're ready to guess the thief, choose that selection from the main menu to see if you're the next Sherlock Holmes or not.
