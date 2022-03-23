@@ -4,7 +4,7 @@ Mystery game in C# for Code Louisville Software Development Course 1
 ## How To Run
 This project uses .NET 6.0. To download the SDK: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
-You will also need the .NET CLI. https://docs.microsoft.com/en-us/dotnet/core/tools/
+You will also need the .NET CLI (which is included when you install the SDK). https://docs.microsoft.com/en-us/dotnet/core/tools/
 
 Recommend using VS Code: https://code.visualstudio.com/
 
@@ -17,7 +17,7 @@ There is a Makefile for this project. If you can't run a Makefile in Window's Co
     1. To run: `make run`
     1. To run tests: `make test`
 
-Windows:
+Windows/Full commands from parent directory:
 1. To restore dependencies: `cd UrbanPancake` then `dotnet restore` (within UrbanPancake directory)
 2. To run: `dotnet run --project UrbanPancake/UrbanPancake.csproj`
 3. To run tests: `dotnet test UrbanPancake.LibraryTests/UrbanPancake.LibraryTests.csproj`
